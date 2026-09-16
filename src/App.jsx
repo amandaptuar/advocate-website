@@ -581,11 +581,11 @@ ${message || 'No additional message details provided.'}
         </div>
         <div className="blog-grid">
           {[
-            ['/gallery-courthouse.jpg', 'August 2026', 'MAHARASHTRA PROPERTY LAW', 'Understanding RERA: Homebuyer Rights in Maharashtra & India', 'Learn about your legal rights under the Real Estate Regulation Act 2016, MahaRERA compliance, and builder dispute resolution.', 'https://rera.maharashtra.gov.in/'],
-            ['/gallery-lawbooks.jpg', 'July 2026', 'INDIAN CRIMINAL LAW', 'Bharatiya Nyaya Sanhita (BNS) 2023: Major Changes in Indian Law', 'Key insights into the new Indian criminal laws replacing IPC and CrPC, electronic evidence admissibility, and bail procedures.', 'https://www.mha.gov.in/en/common-page/new-criminal-laws'],
+            ['/gallery-courthouse.jpg', 'August 2026', 'MAHARASHTRA PROPERTY LAW', 'Understanding RERA: Homebuyer Rights in Maharashtra & India', 'Learn about your legal rights under the Real Estate Regulation Act 2016, MahaRERA compliance, and builder dispute resolution.', 'https://maharera.maharashtra.gov.in/'],
+            ['/gallery-lawbooks.jpg', 'July 2026', 'INDIAN CRIMINAL LAW', 'Bharatiya Nyaya Sanhita (BNS) 2023: Major Changes in Indian Law', 'Key insights into the new Indian criminal laws replacing IPC and CrPC, electronic evidence admissibility, and bail procedures.', 'https://prsindia.org/billtrack/the-bharatiya-nyaya-sanhita-2023'],
             ['/gallery-contract.jpg', 'June 2026', 'TITLE VERIFICATION & REAL ESTATE', 'Property Due Diligence & Title Verification Guide for India', 'Essential legal checklist for title verification, 30-year search report, encumbrance checks, and property registration in Maharashtra.', 'https://igrmaharashtra.gov.in/'],
             ['/about-image.jpg', 'May 2026', 'CYBER SECURITY & IT ACT', 'Cyber Crime Laws in India: IT Act 2000 & Online Fraud Remedies', 'Understanding legal protections against online banking fraud, UPI scams, identity theft, and filing complaints on cybercrime.gov.in.', 'https://cybercrime.gov.in/'],
-            ['/hero-law-bg.jpg', 'April 2026', 'COMMERCIAL & NI ACT', 'Cheque Bounce Proceedings under Section 138 NI Act, India', 'Step-by-step procedure for issuing statutory 15-day legal notices, court proceedings, and remedies under the Negotiable Instruments Act.', 'https://www.indiacode.nic.in/handle/123456789/2189'],
+            ['/hero-law-bg.jpg', 'April 2026', 'COMMERCIAL & NI ACT', 'Cheque Bounce Proceedings under Section 138 NI Act, India', 'Step-by-step procedure for issuing statutory 15-day legal notices, court proceedings, and remedies under the Negotiable Instruments Act.', 'https://indiankanoon.org/doc/1823824/'],
             ['/services-bg.jpg', 'March 2026', 'INDIAN CONSUMER LAW', 'Consumer Rights & Redressal under Consumer Protection Act 2019', 'Guide to filing consumer complaints for service deficiencies, builder delay compensation, and e-commerce fraud in Indian Consumer Forums.', 'https://consumerhelpline.gov.in/'],
           ].map(([img, dt, cat, t, d, link], i) => (
             <a href={link} target="_blank" rel="noopener noreferrer" className="bl rv" key={i} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
@@ -594,7 +594,7 @@ ${message || 'No additional message details provided.'}
                 <div className="bl-dt">{dt} &bull; {cat}</div>
                 <h3>{t}</h3>
                 <p style={{ flex: 1 }}>{d}</p>
-                <span className="bl-lk">Read Article <ArrowR /></span>
+                <span className="bl-lk">Read Official Article <ArrowR /></span>
               </div>
             </a>
           ))}
