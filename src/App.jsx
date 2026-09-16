@@ -37,6 +37,17 @@ function FloatingWhatsApp() {
   )
 }
 
+/* ===== SVG ICON EXTRAS ===== */
+const CheckCircleIcon = () => (
+  <svg viewBox="0 0 24 24" width="32" height="32"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/></svg>
+)
+const ClockIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z" fill="currentColor"/></svg>
+)
+const TargetIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v2h-2V7zm0 4h2v6h-2v-6z" fill="currentColor"/></svg>
+)
+
 /* ===== PRACTICE AREA DATA ===== */
 const practiceAreas = [
   {
@@ -44,6 +55,22 @@ const practiceAreas = [
     title: 'Civil Litigation',
     tagline: 'Protecting your civil rights with strategic legal representation',
     desc: 'Our civil litigation practice covers a wide spectrum of disputes, providing strong courtroom advocacy and strategic counsel for individuals and businesses alike.',
+    pillars: [
+      { title: 'Strategic Approach', desc: 'Comprehensive case analysis with a focus on building the strongest possible legal position through meticulous preparation and strategic planning.' },
+      { title: 'Client-Centric', desc: 'Early case assessment to provide realistic outlooks, enabling clients to make informed decisions about litigation strategy and settlement options.' },
+      { title: 'Proven Results', desc: 'Track record of successful outcomes in property disputes, contract enforcement, recovery suits, and injunction proceedings at District Court, Pune.' }
+    ],
+    keyServices: [
+      { title: 'Property & Land Disputes', desc: 'Expert representation in ownership disputes, boundary conflicts, title challenges, and possession matters with thorough documentation and evidence.' },
+      { title: 'Contract Enforcement', desc: 'Handling breach of contract cases, specific performance actions, and recovery suits with strategic litigation planning and execution.' },
+      { title: 'Interim Relief & Injunctions', desc: 'Swift action for temporary injunctions, stay orders, and interim relief applications to protect your interests during pending litigation.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Case Evaluation', desc: 'Thorough analysis of facts, evidence, and applicable law to assess case strength and develop strategy.' },
+      { num: '2', title: 'Legal Strategy', desc: 'Crafting a tailored litigation roadmap with clear timelines, milestones, and contingency planning.' },
+      { num: '3', title: 'Court Representation', desc: 'Aggressive yet professional advocacy before District Court with meticulous case preparation.' },
+      { num: '4', title: 'Resolution & Execution', desc: 'Pursuing favourable judgments, settlements, or decrees with post-litigation enforcement support.' }
+    ],
     sections: [
       { heading: 'What We Handle', text: 'We represent clients in property disputes, breach of contract matters, recovery suits, injunction proceedings, declaratory suits, and partition cases. Our approach focuses on thorough case preparation and aggressive yet professional advocacy before the District Court, Pune.' },
       { heading: 'Our Approach', text: 'Every civil case begins with a detailed analysis of facts and applicable law. We believe in early case assessment to provide clients with a realistic outlook, helping them make informed decisions about litigation strategy, settlement options, and timeline expectations.' },
@@ -55,6 +82,22 @@ const practiceAreas = [
     title: 'Criminal Defence',
     tagline: 'Vigorous defence of your rights at every stage of criminal proceedings',
     desc: 'Our criminal defence practice is built on the fundamental principle that every accused person deserves competent and dedicated legal representation.',
+    pillars: [
+      { title: 'Swift Action', desc: 'Immediate legal response for arrests, FIRs, and bail matters — because criminal cases demand urgent and decisive action from the very first moment.' },
+      { title: 'Evidence-Based Defence', desc: 'Building defence strategies grounded in meticulous evidence analysis, witness preparation, and deep understanding of procedural and substantive criminal law.' },
+      { title: 'Court Expertise', desc: 'Deep familiarity with Session Court, Pune procedures, judicial tendencies, and prosecution patterns to craft winning defence strategies.' }
+    ],
+    keyServices: [
+      { title: 'Bail & Anticipatory Bail', desc: 'Urgent bail applications, anticipatory bail petitions, and interim protection orders with swift court representation.' },
+      { title: 'Trial & Cross-Examination', desc: 'Comprehensive trial representation including evidence presentation, witness examination, and compelling oral arguments.' },
+      { title: 'Appeals & Revisions', desc: 'Criminal appeals, revision petitions, and quashing applications before higher courts including High Court representation.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Immediate Response', desc: 'Swift legal action upon arrest or FIR, including police station representation and bail applications.' },
+      { num: '2', title: 'Defence Strategy', desc: 'Comprehensive case analysis, evidence review, and formulation of a robust defence framework.' },
+      { num: '3', title: 'Trial Advocacy', desc: 'Aggressive cross-examination, witness management, and compelling arguments before the court.' },
+      { num: '4', title: 'Verdict & Appeal', desc: 'Post-verdict analysis, appeal preparation, and execution of appellate strategy if required.' }
+    ],
     sections: [
       { heading: 'Defence Services', text: 'From the moment of arrest through trial and appeal, we provide comprehensive criminal defence services. This includes bail applications, anticipatory bail, quashing petitions, trial representation, and appeals before higher courts.' },
       { heading: 'Case Categories', list: ['Bail & Anticipatory Bail Applications', 'Cheque Bounce Cases (NI Act Sec. 138)', 'Criminal Complaints & FIR Matters', 'White Collar Crime Defence', 'Domestic Violence Cases', 'Trial & Cross-examination', 'Criminal Appeals & Revision Petitions', 'Quashing Petitions under Sec. 482 CrPC'] },
@@ -66,6 +109,22 @@ const practiceAreas = [
     title: 'Family Law',
     tagline: 'Sensitive handling of family matters with empathy and expertise',
     desc: 'Family disputes are deeply personal. We handle these matters with the discretion, sensitivity, and legal expertise they require.',
+    pillars: [
+      { title: 'Empathetic Counsel', desc: 'Understanding the emotional weight of family disputes and providing compassionate guidance while maintaining professional objectivity.' },
+      { title: 'Mediation Focus', desc: 'Prioritising amicable resolution through mediation and negotiation, preserving family relationships wherever possible.' },
+      { title: 'Child-First Approach', desc: 'Ensuring that the best interests of children remain the primary consideration in custody, guardianship, and maintenance matters.' }
+    ],
+    keyServices: [
+      { title: 'Divorce & Separation', desc: 'Handling contested and mutual consent divorce proceedings, judicial separation, and annulment cases with sensitivity and expertise.' },
+      { title: 'Child Custody & Support', desc: 'Custody applications, visitation rights, child maintenance, and guardianship petitions with a child-first approach.' },
+      { title: 'Domestic Violence Protection', desc: 'Filing protection orders under DV Act, maintenance claims under Sec. 125 CrPC, and comprehensive legal support for victims.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Confidential Consultation', desc: 'Private, empathetic discussion of your family situation and exploration of all available legal options.' },
+      { num: '2', title: 'Mediation Attempt', desc: 'Where appropriate, facilitating amicable resolution through counselling and structured mediation sessions.' },
+      { num: '3', title: 'Court Filing', desc: 'Preparing and filing necessary petitions, applications, and interim relief requests before Family Court.' },
+      { num: '4', title: 'Resolution & Support', desc: 'Securing favourable orders and providing ongoing legal support for enforcement and compliance.' }
+    ],
     sections: [
       { heading: 'Our Family Law Practice', text: 'We understand that family law cases are among the most emotionally challenging legal matters. Our approach balances compassionate client counselling with firm legal advocacy to achieve the best possible outcomes.' },
       { heading: 'Services', list: ['Divorce & Mutual Consent Divorce', 'Maintenance Claims (Sec. 125 CrPC)', 'Child Custody & Visitation Rights', 'Domestic Violence Protection', 'Hindu Succession & Inheritance', 'Muslim Personal Law Matters', 'Guardianship & Adoption', 'Dowry Harassment Cases'] },
@@ -77,6 +136,22 @@ const practiceAreas = [
     title: 'RERA Compliance',
     tagline: 'Complete advisory on Real Estate Regulation & Development Act compliance',
     desc: 'Navigate the complexities of MahaRERA with expert guidance. We assist both developers and homebuyers in understanding and complying with RERA provisions.',
+    pillars: [
+      { title: 'Developer Advisory', desc: 'End-to-end RERA compliance for builders including project registration, quarterly filings, advertising guidelines, and escrow management.' },
+      { title: 'Homebuyer Protection', desc: 'Protecting homebuyers from delayed possession, structural defects, deviations from promised amenities, and unfair contract terms.' },
+      { title: 'Regulatory Expertise', desc: 'Deep knowledge of MahaRERA rules, RERA Appellate Tribunal procedures, and regulatory framework for real estate in Maharashtra.' }
+    ],
+    keyServices: [
+      { title: 'MahaRERA Registration', desc: 'Complete project registration assistance including documentation, compliance checklists, and liaison with the MahaRERA Authority.' },
+      { title: 'Complaint Resolution', desc: 'Filing and pursuing complaints before MahaRERA for homebuyers, and defence representation for developers facing buyer complaints.' },
+      { title: 'Compliance Audit', desc: 'Periodic compliance audits, quarterly update filings, agreement vetting, and penalty mitigation advisory for real estate projects.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Compliance Assessment', desc: 'Reviewing project status, documentation, and identifying compliance gaps under RERA provisions.' },
+      { num: '2', title: 'Registration & Filing', desc: 'Preparing and filing MahaRERA registration applications with complete documentation support.' },
+      { num: '3', title: 'Ongoing Compliance', desc: 'Quarterly update filings, escrow monitoring, and continuous compliance advisory for developers.' },
+      { num: '4', title: 'Dispute Resolution', desc: 'Representing clients before MahaRERA Authority and RERA Appellate Tribunal for complaint resolution.' }
+    ],
     sections: [
       { heading: 'For Developers & Builders', text: 'We provide end-to-end RERA compliance advisory including project registration with MahaRERA, quarterly update filings, compliance with advertising guidelines, escrow account management, and handling of buyer complaints before the RERA Authority.' },
       { heading: 'For Homebuyers', text: 'If you are facing issues with delayed possession, structural defects, deviations from promised amenities, or unfair contract terms, we help you file and pursue complaints before MahaRERA. We also assist in recovery of compensation and interest for delayed projects.' },
@@ -88,6 +163,22 @@ const practiceAreas = [
     title: 'Property Verification & Due Diligence',
     tagline: 'Comprehensive property title checks and due diligence across India',
     desc: 'Before you invest in any property, our thorough verification process ensures your investment is legally sound, free from encumbrances, and properly documented.',
+    pillars: [
+      { title: 'Multi-Layer Verification', desc: 'Comprehensive checks covering title chain analysis, encumbrance search, revenue records, municipal approvals, and pending litigation screening.' },
+      { title: 'Bank-Accepted Reports', desc: 'Due diligence reports that meet banking and institutional standards, enabling smooth loan processing and property transactions.' },
+      { title: 'Pan-India Coverage', desc: 'Property verification services across Pune, Mumbai, Chennai, Delhi, Bangalore, Noida, Hyderabad, Kolkata, and other major cities.' }
+    ],
+    keyServices: [
+      { title: 'Title Chain Analysis', desc: 'Complete ownership history verification spanning 30+ years with document authentication and chain of title validation.' },
+      { title: 'Encumbrance & Revenue Check', desc: 'Encumbrance certificate analysis, 7/12 extract verification, revenue record checks, and NA order validation.' },
+      { title: 'Legal Compliance Verification', desc: 'Municipal approvals, building plan sanctions, RERA registration status, layout approvals, and land use verification.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Document Collection', desc: 'Gathering all property documents, sale deeds, revenue records, and related legal instruments for review.' },
+      { num: '2', title: 'Title Verification', desc: 'Comprehensive title chain analysis, encumbrance checks, and ownership history spanning 30+ years.' },
+      { num: '3', title: 'Compliance Check', desc: 'Verifying municipal approvals, RERA status, building plans, NA orders, and land use compliance.' },
+      { num: '4', title: 'Due Diligence Report', desc: 'Delivering a comprehensive, bank-accepted report with findings, risk assessment, and legal opinion.' }
+    ],
     sections: [
       { heading: 'Our Due Diligence Process', text: 'We conduct multi-layered property verification covering title chain analysis, encumbrance search, revenue record verification, municipal approvals, litigation search, and physical site inspection coordination. Our reports are comprehensive and bank-accepted.' },
       { heading: 'What We Check', list: ['Complete Title Chain (30+ years)', 'Encumbrance Certificate Analysis', 'Revenue Records & 7/12 Extracts', 'Municipal / Corporation Approvals', 'Pending Litigation Search', 'RERA Registration Verification', 'Layout & Building Plan Sanctions', 'NA Order & Land Use Verification'] },
@@ -99,6 +190,22 @@ const practiceAreas = [
     title: 'Cyber Crime & IT Law',
     tagline: 'Expert legal counsel for cyber offences, digital fraud, and IT Act matters',
     desc: 'In an increasingly digital world, cyber crimes are on the rise. We provide specialized legal assistance for both victims and accused in all cyber-related matters.',
+    pillars: [
+      { title: 'Technical-Legal Expertise', desc: 'Unique combination of technical understanding and legal knowledge to handle complex cyber crime cases involving digital evidence and forensics.' },
+      { title: 'Victim Representation', desc: 'Assisting victims of online fraud, identity theft, cyberstalking, and harassment in filing complaints with Cyber Cell and pursuing legal remedies.' },
+      { title: 'IT Act Compliance', desc: 'Advisory on Information Technology Act, 2000 compliance, data protection regulations, cyber security policies, and digital privacy laws.' }
+    ],
+    keyServices: [
+      { title: 'Online Fraud & Identity Theft', desc: 'Legal representation for UPI fraud, phishing scams, online banking fraud, identity theft, and e-commerce cheating cases.' },
+      { title: 'Cyber Harassment & Defamation', desc: 'Handling social media harassment, cyberstalking, online defamation, and privacy violation cases with swift legal action.' },
+      { title: 'Business IT Compliance', desc: 'IT policy framing, data protection advisory, cyber security legal compliance, incident response planning, and fintech dispute resolution.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Incident Assessment', desc: 'Evaluating the cyber offence, preserving digital evidence, and identifying the appropriate legal remedies available.' },
+      { num: '2', title: 'Complaint Filing', desc: 'Filing cyber crime complaints with Cyber Cell, securing FIRs, and initiating legal proceedings against offenders.' },
+      { num: '3', title: 'Evidence & Forensics', desc: 'Coordinating digital forensics, evidence preservation, and building a strong case with technical documentation.' },
+      { num: '4', title: 'Court Representation', desc: 'Representing clients before courts and tribunals for prosecution or defence in cyber crime matters.' }
+    ],
     sections: [
       { heading: 'Cyber Crime Representation', text: 'Our cyber crime practice handles cases involving online financial fraud, identity theft, phishing scams, social media harassment, defamation through digital platforms, unauthorized data access, and hacking. We assist clients in filing cyber crime complaints with the Cyber Cell and represent them before courts and tribunals.' },
       { heading: 'Areas of Expertise', list: ['Online Banking & UPI Fraud', 'Identity Theft & Phishing', 'Social Media Harassment & Cyberstalking', 'Data Breach & Privacy Violations', 'Hacking & Unauthorized Access', 'Cyber Defamation', 'Online Cheating & E-commerce Fraud', 'IT Act Violations & Penalties', 'Digital Evidence & Forensics Advisory', 'Cryptocurrency & Fintech Disputes'] },
@@ -110,6 +217,22 @@ const practiceAreas = [
     title: 'Documentation & Drafting',
     tagline: 'Precise legal document drafting for all your transactional needs',
     desc: 'Properly drafted legal documents form the foundation of any secure transaction. We provide meticulous drafting services for a wide range of legal instruments.',
+    pillars: [
+      { title: 'Precision Drafting', desc: 'Every document is tailored to specific transaction requirements with precise legal language, clear terms, and comprehensive coverage of all contingencies.' },
+      { title: 'Legal Compliance', desc: 'Ensuring all documents comply with applicable laws, stamp duty requirements, registration rules, and regulatory frameworks.' },
+      { title: 'End-to-End Support', desc: 'From initial drafting through vetting, registration, and post-registration formalities — complete documentation assistance.' }
+    ],
+    keyServices: [
+      { title: 'Property Documents', desc: 'Sale deeds, conveyance deeds, lease agreements, development agreements, gift deeds, and all property-related documentation.' },
+      { title: 'Business Agreements', desc: 'Partnership deeds, MOUs, joint venture agreements, service agreements, and commercial contract drafting and vetting.' },
+      { title: 'Personal Legal Documents', desc: 'Wills, testamentary documents, power of attorney (GPA & SPA), legal notices, replies, and affidavits.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Requirement Analysis', desc: 'Understanding the transaction details, parties involved, and specific requirements for the legal document.' },
+      { num: '2', title: 'Drafting & Review', desc: 'Preparing the document with precise legal language, reviewing all clauses, and ensuring comprehensive coverage.' },
+      { num: '3', title: 'Client Approval', desc: 'Presenting the draft for client review, incorporating feedback, and finalising the document.' },
+      { num: '4', title: 'Registration & Filing', desc: 'Stamp duty calculation, e-filing, biometric registration scheduling, and post-registration formalities.' }
+    ],
     sections: [
       { heading: 'Drafting Services', text: 'Our documentation practice covers drafting, vetting, and registration of all types of legal instruments. Every document we prepare is tailored to the specific requirements of the transaction while ensuring compliance with applicable laws and registration requirements.' },
       { heading: 'Documents We Draft', list: ['Sale Deeds & Conveyance Deeds', 'Lease & Rent Agreements', 'Partnership Deeds & MOUs', 'Wills & Testamentary Documents', 'Power of Attorney (GPA & SPA)', 'Gift Deeds & Settlement Deeds', 'Development Agreements', 'Joint Venture Agreements', 'Legal Notices & Replies'] },
@@ -309,7 +432,7 @@ ${message || 'No additional message details provided.'}
       {/* STATS */}
       <div className="stats">
         {[
-          ['500+', 'Cases Handled'],
+          ['350+', 'Cases Handled'],
           ['10+', 'Years Experience'],
           ['300+', 'Satisfied Clients'],
           ['7+', 'Cities Covered'],
@@ -413,7 +536,7 @@ ${message || 'No additional message details provided.'}
       <div className="highlights" id="gallery">
         <div className="hl-grid">
           {[
-            ['38+', 'Years of Judiciary', 'Exposed to decades of judicial experience and deep understanding of Indian legal system.'],
+            ['350+', 'Cases Handled', 'Over 350+ successful legal matters handled across civil, criminal, property, and cyber law.'],
             ['99.9%', 'Solved Legal Matters', 'An outstanding track record of successfully resolved cases across multiple practice areas.'],
             ['24/7', 'Client Support', 'Round-the-clock availability for urgent legal matters, bail applications, and emergency consultations.'],
             ['100%', 'Client Dedication', 'Every case receives our complete attention, with personalised strategies and transparent communication.'],
@@ -454,23 +577,26 @@ ${message || 'No additional message details provided.'}
         <div className="txt-c rv">
           <div className="s-label">Insights</div>
           <h2 className="s-title">Legal <span className="hi">Articles</span></h2>
-          <p className="s-desc">Stay informed with our legal insights and updates</p>
+          <p className="s-desc">Stay informed with expert Indian legal insights & act updates</p>
         </div>
         <div className="blog-grid">
           {[
-            ['/gallery-courthouse.jpg', 'August 2026', 'Understanding RERA: A Guide for Homebuyers in Maharashtra', 'Learn about your rights under the Real Estate Regulation Act and how MahaRERA protects your investment.'],
-            ['/gallery-contract.jpg', 'July 2026', 'Why Property Due Diligence is Essential Before Purchase', 'A comprehensive overview of the due diligence process and how verification saves you from legal disputes.'],
-            ['/gallery-lawbooks.jpg', 'June 2026', 'Cyber Crime Laws in India: What You Need to Know', 'Understanding the IT Act, reporting cyber crimes, and legal remedies available to victims of online fraud.'],
-          ].map(([img, dt, t, d], i) => (
-            <div className="bl rv" key={i}>
+            ['/gallery-courthouse.jpg', 'August 2026', 'MAHARASHTRA PROPERTY LAW', 'Understanding RERA: Homebuyer Rights in Maharashtra & India', 'Learn about your legal rights under the Real Estate Regulation Act 2016, MahaRERA compliance, and builder dispute resolution.', 'https://rera.maharashtra.gov.in/'],
+            ['/gallery-lawbooks.jpg', 'July 2026', 'INDIAN CRIMINAL LAW', 'Bharatiya Nyaya Sanhita (BNS) 2023: Major Changes in Indian Law', 'Key insights into the new Indian criminal laws replacing IPC and CrPC, electronic evidence admissibility, and bail procedures.', 'https://www.mha.gov.in/en/common-page/new-criminal-laws'],
+            ['/gallery-contract.jpg', 'June 2026', 'TITLE VERIFICATION & REAL ESTATE', 'Property Due Diligence & Title Verification Guide for India', 'Essential legal checklist for title verification, 30-year search report, encumbrance checks, and property registration in Maharashtra.', 'https://igrmaharashtra.gov.in/'],
+            ['/about-image.jpg', 'May 2026', 'CYBER SECURITY & IT ACT', 'Cyber Crime Laws in India: IT Act 2000 & Online Fraud Remedies', 'Understanding legal protections against online banking fraud, UPI scams, identity theft, and filing complaints on cybercrime.gov.in.', 'https://cybercrime.gov.in/'],
+            ['/hero-law-bg.jpg', 'April 2026', 'COMMERCIAL & NI ACT', 'Cheque Bounce Proceedings under Section 138 NI Act, India', 'Step-by-step procedure for issuing statutory 15-day legal notices, court proceedings, and remedies under the Negotiable Instruments Act.', 'https://www.indiacode.nic.in/handle/123456789/2189'],
+            ['/services-bg.jpg', 'March 2026', 'INDIAN CONSUMER LAW', 'Consumer Rights & Redressal under Consumer Protection Act 2019', 'Guide to filing consumer complaints for service deficiencies, builder delay compensation, and e-commerce fraud in Indian Consumer Forums.', 'https://consumerhelpline.gov.in/'],
+          ].map(([img, dt, cat, t, d, link], i) => (
+            <a href={link} target="_blank" rel="noopener noreferrer" className="bl rv" key={i} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
               <div className="bl-img"><img src={img} alt={t} /></div>
-              <div className="bl-body">
-                <div className="bl-dt">{dt}</div>
+              <div className="bl-body" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <div className="bl-dt">{dt} &bull; {cat}</div>
                 <h3>{t}</h3>
-                <p>{d}</p>
-                <span className="bl-lk">Read More <ArrowR /></span>
+                <p style={{ flex: 1 }}>{d}</p>
+                <span className="bl-lk">Read Article <ArrowR /></span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -545,6 +671,7 @@ function PracticePage() {
   const { id } = useParams()
   const navigate = useNavigate()
   const area = practiceAreas.find(p => p.id === id)
+  useReveal()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -560,36 +687,143 @@ function PracticePage() {
     )
   }
 
+  const relatedAreas = practiceAreas.filter(p => p.id !== id).slice(0, 3)
+
   return (
     <>
+      {/* === 1. HERO BANNER === */}
       <div className="prac-hero">
         <Link to="/" className="ph-back" onClick={() => window.scrollTo(0, 0)}>
           <ArrowL /> Back to Home
         </Link>
+        <div className="ph-label">{area.tagline}</div>
         <h1>{area.title.split(' ').slice(0, -1).join(' ')} <span className="hi">{area.title.split(' ').slice(-1)}</span></h1>
         <p className="ph-desc">{area.desc}</p>
-      </div>
-      <div className="prac-body">
-        {area.sections.map((s, i) => (
-          <div key={i} style={{ marginBottom: 32 }}>
-            <h2>{s.heading}</h2>
-            {s.text && <p>{s.text}</p>}
-            {s.list && (
-              <ul>
-                {s.list.map((item, j) => <li key={j}>{item}</li>)}
-              </ul>
-            )}
-          </div>
-        ))}
-        <div className="prac-cta">
-          <h3>Need Legal Assistance?</h3>
-          <p>Contact Adv. Vivek Wankhade for expert consultation on {area.title.toLowerCase()} matters.</p>
-          <a href="tel:+917499768417" className="b-gold">Call +91 74997 68417</a>
+        <div className="ph-btns">
+          <a href="https://wa.me/917499768417?text=Hello%20Adv.%20Vivek%20Wankhade%2C%20I%20need%20consultation%20regarding%20" 
+             target="_blank" rel="noopener noreferrer" className="b-gold">Book Consultation</a>
+          <a href="tel:+917499768417" className="b-line">Call Now</a>
         </div>
       </div>
+
+      {/* === 2. CORE PILLARS (Vision/Mission/Value style) === */}
+      <section className="sec prac-pillars-sec">
+        <div className="txt-c rv">
+          <div className="s-label">Our Approach</div>
+          <h2 className="s-title">Trusted <span className="hi">{area.title}</span> Experts</h2>
+          <p className="s-desc">{area.tagline}</p>
+        </div>
+        <div className="prac-pillars-grid rv">
+          {area.pillars.map((p, i) => (
+            <div className="prac-pillar-card" key={i}>
+              <div className="prac-pillar-icon"><CheckCircleIcon /></div>
+              <h4>{p.title}</h4>
+              <p>{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* === 3. KEY SERVICES GRID === */}
+      <section className="sec sec-alt prac-keysvc-sec">
+        <div className="txt-c rv">
+          <div className="s-label">Services</div>
+          <h2 className="s-title">Key <span className="hi">Services</span></h2>
+          <p className="s-desc">Comprehensive legal solutions in {area.title.toLowerCase()}</p>
+        </div>
+        <div className="prac-keysvc-grid">
+          {area.keyServices.map((ks, i) => (
+            <div className="prac-keysvc-card rv" key={i}>
+              <div className="prac-keysvc-top">
+                <h4>{ks.title}</h4>
+                <p>{ks.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* === 4. DETAILED CONTENT SECTIONS === */}
+      <section className="sec prac-detail-sec">
+        <div className="prac-detail-inner">
+          {area.sections.map((s, i) => (
+            <div className={`prac-detail-block rv`} key={i}>
+              <div className="prac-detail-num">0{i + 1}</div>
+              <h2>{s.heading}</h2>
+              {s.text && <p>{s.text}</p>}
+              {s.list && (
+                <div className="prac-detail-list">
+                  {s.list.map((item, j) => (
+                    <div className="prac-detail-list-item" key={j}>
+                      <div className="pdl-dot"></div>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* === 5. PROCESS STEPS === */}
+      <section className="sec sec-alt prac-process-sec">
+        <div className="txt-c rv">
+          <div className="s-label">Our Process</div>
+          <h2 className="s-title">How We <span className="hi">Work</span></h2>
+          <p className="s-desc">A structured approach to delivering the best legal outcomes</p>
+        </div>
+        <div className="prac-process-grid rv">
+          {area.processSteps.map((step, i) => (
+            <div className="prac-process-card" key={i}>
+              <div className="prac-process-num">{step.num}</div>
+              <h4>{step.title}</h4>
+              <p>{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* === 6. RELATED PRACTICE AREAS === */}
+      <section className="sec prac-related-sec">
+        <div className="txt-c rv">
+          <div className="s-label">Explore More</div>
+          <h2 className="s-title">Related <span className="hi">Practice Areas</span></h2>
+          <p className="s-desc">Other areas of legal expertise offered by Adv. Vivek Wankhade</p>
+        </div>
+        <div className="prac-related-grid">
+          {relatedAreas.map((ra, i) => (
+            <div className="prac-related-card rv" key={ra.id} onClick={() => navigate(`/practice/${ra.id}`)}>
+              <div className="prac-related-num">0{i + 1}</div>
+              <h3>{ra.title}</h3>
+              <p>{ra.tagline}</p>
+              <span className="svc-link">Learn More <ArrowR /></span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* === 7. FULL CTA SECTION === */}
+      <section className="prac-cta-full">
+        <div className="prac-cta-full-inner rv">
+          <div className="s-label" style={{color: 'var(--gold-hi)'}}>Get Started</div>
+          <h2>Need Legal Assistance with <span className="hi">{area.title}</span>?</h2>
+          <p>Schedule a consultation with Adv. Vivek Wankhade for expert legal advice and representation.</p>
+          <div className="prac-cta-btns">
+            <a href="tel:+917499768417" className="b-gold">
+              Call +91 74997 68417
+            </a>
+            <a href="https://wa.me/917499768417?text=Hello%20Adv.%20Vivek%20Wankhade%2C%20I%20need%20consultation%20regarding%20" 
+               target="_blank" rel="noopener noreferrer" className="b-whatsapp">
+              <WhatsAppIcon /> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
+
 
 /* ===== APP ROOT ===== */
 function App() {
