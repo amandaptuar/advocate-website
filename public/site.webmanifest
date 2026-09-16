@@ -1,0 +1,22 @@
+{
+  "name": "Advocate Vivek Wankhade - Law Practice",
+  "short_name": "Adv. Wankhade",
+  "description": "Official legal practice of Adv. Vivek Wankhade - Advocate at District and Session Court, Pune. Specializing in Property Law, RERA Compliance, Due Diligence, Civil and Criminal Defence.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1710",
+  "theme_color": "#1a1710",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/hero-banner.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

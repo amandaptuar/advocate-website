@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation, useParams } from 'react-router-dom'
+import SEO from './components/SEO'
+import { homeSEO, practiceSEO, getPracticeStructuredData } from './data/seoMetadata'
 import './index.css'
 
 /* ===== SVG ICONS ===== */
@@ -30,6 +32,7 @@ function FloatingWhatsApp() {
       rel="noopener noreferrer" 
       className="whatsapp-float-circle"
       title="Chat on WhatsApp"
+      aria-label="Chat with Adv. Vivek Wankhade on WhatsApp"
     >
       <WhatsAppIcon size={30} fill="#ffffff" />
       <div className="whatsapp-pulse"></div>
@@ -393,6 +396,13 @@ ${message || 'No additional message details provided.'}
 
   return (
     <>
+      <SEO
+        title={homeSEO.title}
+        description={homeSEO.description}
+        canonicalPath={homeSEO.canonicalPath}
+        keywords={homeSEO.keywords}
+        structuredData={homeSEO.structuredData}
+      />
       {showDisc && (
         <div className="disc-overlay">
           <div className="disc-box">
@@ -414,7 +424,7 @@ ${message || 'No additional message details provided.'}
 
       {/* HERO (CLEAN LAW BACKGROUND & HEADING + BUTTONS) */}
       <section className="hero" id="home">
-        <div className="hero-bg"><img src="/indian-judiciary.png" alt="Indian Judiciary Building" /></div>
+        <div className="hero-bg"><img src="/indian-judiciary.png" alt="Indian Judiciary High Court and District Court Representation - Advocate Vivek Wankhade Pune" fetchPriority="high" loading="eager" /></div>
         <div className="hero-inner-centered">
           <div className="hero-eyebrow-centered">HIGH COURT & DISTRICT COURT ADVOCATE</div>
           <div className="hero-name-pre-centered">Advocate</div>
@@ -453,7 +463,7 @@ ${message || 'No additional message details provided.'}
         </div>
         <div className="abt-grid">
           <div className="abt-img rv">
-            <img src="/image.png" alt="Adv. Vivek Wankhade" />
+            <img src="/image.png" alt="Advocate Vivek Wankhade - District and Session Court, Pune" loading="lazy" decoding="async" />
             <div className="yr">
               <div className="yr-n">10+</div>
               <div className="yr-t">Years</div>
@@ -485,12 +495,12 @@ ${message || 'No additional message details provided.'}
         </div>
         <div className="svc-grid">
           {practiceAreas.map((pa, i) => (
-            <div className="svc rv" key={pa.id} onClick={() => navigate(`/practice/${pa.id}`)}>
+            <Link to={`/practice/${pa.id}`} className="svc rv" key={pa.id} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <div className="svc-n">0{i + 1}</div>
               <h3>{pa.title}</h3>
               <p>{pa.tagline}</p>
               <span className="svc-link">Learn More <ArrowR /></span>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -632,28 +642,28 @@ ${message || 'No additional message details provided.'}
             <form onSubmit={handleWhatsAppSubmit}>
               <div className="fg-row">
                 <div className="fg">
-                  <label>Full Name</label>
-                  <input type="text" name="name" placeholder="Your full name" required />
+                  <label htmlFor="cf-name">Full Name</label>
+                  <input type="text" id="cf-name" name="name" placeholder="Your full name" required />
                 </div>
                 <div className="fg">
-                  <label>Phone Number</label>
-                  <input type="tel" name="phone" placeholder="+91 00000 00000" required />
+                  <label htmlFor="cf-phone">Phone Number</label>
+                  <input type="tel" id="cf-phone" name="phone" placeholder="+91 00000 00000" required />
                 </div>
               </div>
               <div className="fg">
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="your.email@example.com" />
+                <label htmlFor="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" placeholder="your.email@example.com" />
               </div>
               <div className="fg">
-                <label>Legal Service Area</label>
-                <select name="service">
+                <label htmlFor="cf-service">Legal Service Area</label>
+                <select id="cf-service" name="service">
                   <option value="">Select practice area</option>
                   {practiceAreas.map(p => <option key={p.id} value={p.title}>{p.title}</option>)}
                 </select>
               </div>
               <div className="fg">
-                <label>Describe Your Query</label>
-                <textarea name="message" placeholder="Provide details about your legal query or case..." rows="4" required />
+                <label htmlFor="cf-message">Describe Your Query</label>
+                <textarea id="cf-message" name="message" placeholder="Provide details about your legal query or case..." rows="4" required />
               </div>
               <button type="submit" className="f-sub-whatsapp">
                 <WhatsAppIcon /> Send Inquiry via WhatsApp
@@ -669,7 +679,6 @@ ${message || 'No additional message details provided.'}
 /* ===== PRACTICE AREA PAGE ===== */
 function PracticePage() {
   const { id } = useParams()
-  const navigate = useNavigate()
   const area = practiceAreas.find(p => p.id === id)
   useReveal()
 
@@ -680,17 +689,32 @@ function PracticePage() {
   if (!area) {
     return (
       <div style={{ padding: '200px 48px 100px', textAlign: 'center' }}>
-        <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2rem', marginBottom: 16 }}>Page Not Found</h2>
+        <SEO title="Practice Area Not Found | Adv. Vivek Wankhade" noIndex={true} />
+        <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2rem', marginBottom: 16 }}>Practice Area Not Found</h2>
         <p style={{ color: 'var(--gray)', marginBottom: 24 }}>The practice area you're looking for doesn't exist.</p>
         <Link to="/" className="b-gold" onClick={() => window.scrollTo(0, 0)}>Go Home</Link>
       </div>
     )
   }
 
+  const meta = practiceSEO[id] || {
+    title: `${area.title} | Adv. Vivek Wankhade | Pune Advocate`,
+    description: area.desc,
+    canonicalPath: `/practice/${id}`,
+    keywords: `${area.title}, Advocate Pune, Lawyer Pune, Legal Counsel Maharashtra`,
+  }
+  const structuredData = getPracticeStructuredData(id, area.title, area.desc)
   const relatedAreas = practiceAreas.filter(p => p.id !== id).slice(0, 3)
 
   return (
     <>
+      <SEO
+        title={meta.title}
+        description={meta.description}
+        canonicalPath={meta.canonicalPath}
+        keywords={meta.keywords}
+        structuredData={structuredData}
+      />
       {/* === 1. HERO BANNER === */}
       <div className="prac-hero">
         <Link to="/" className="ph-back" onClick={() => window.scrollTo(0, 0)}>
@@ -769,14 +793,14 @@ function PracticePage() {
       {/* === 5. PROCESS STEPS === */}
       <section className="sec sec-alt prac-process-sec">
         <div className="txt-c rv">
-          <div className="s-label">Our Process</div>
-          <h2 className="s-title">How We <span className="hi">Work</span></h2>
-          <p className="s-desc">A structured approach to delivering the best legal outcomes</p>
+          <div className="s-label">How We Work</div>
+          <h2 className="s-title">Our <span className="hi">Process</span></h2>
+          <p className="s-desc">A structured approach to handling your {area.title.toLowerCase()} matter</p>
         </div>
-        <div className="prac-process-grid rv">
+        <div className="prac-process-grid">
           {area.processSteps.map((step, i) => (
-            <div className="prac-process-card" key={i}>
-              <div className="prac-process-num">{step.num}</div>
+            <div className="prac-process-card rv" key={i}>
+              <div className="prac-process-step-badge">{step.num}</div>
               <h4>{step.title}</h4>
               <p>{step.desc}</p>
             </div>
@@ -793,12 +817,18 @@ function PracticePage() {
         </div>
         <div className="prac-related-grid">
           {relatedAreas.map((ra, i) => (
-            <div className="prac-related-card rv" key={ra.id} onClick={() => navigate(`/practice/${ra.id}`)}>
+            <Link
+              to={`/practice/${ra.id}`}
+              className="prac-related-card rv"
+              key={ra.id}
+              onClick={() => window.scrollTo(0, 0)}
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+            >
               <div className="prac-related-num">0{i + 1}</div>
               <h3>{ra.title}</h3>
               <p>{ra.tagline}</p>
               <span className="svc-link">Learn More <ArrowR /></span>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -824,6 +854,21 @@ function PracticePage() {
   )
 }
 
+/* ===== 404 NOT FOUND PAGE ===== */
+function NotFoundPage() {
+  return (
+    <section className="sec" style={{ minHeight: '65vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '160px 24px 80px' }}>
+      <SEO title="404: Page Not Found | Adv. Vivek Wankhade" noIndex={true} />
+      <div style={{ maxWidth: 600, margin: '0 auto' }}>
+        <div className="s-label">Error 404</div>
+        <h1 className="s-title" style={{ margin: '0 auto 16px' }}>Page <span className="hi">Not Found</span></h1>
+        <p className="s-desc" style={{ margin: '0 auto 28px' }}>The requested legal page or resource could not be found. Please return to the homepage or explore our legal practice areas.</p>
+        <Link to="/" className="b-gold" onClick={() => window.scrollTo(0, 0)}>Return to Home</Link>
+      </div>
+    </section>
+  )
+}
+
 
 /* ===== APP ROOT ===== */
 function App() {
@@ -833,6 +878,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/practice/:id" element={<PracticePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
       <FloatingWhatsApp />

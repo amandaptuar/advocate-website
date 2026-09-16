@@ -1,0 +1,13 @@
+# robots.txt for Legal Home Solutions - Advocate Vivek Wankhade
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+
+# Host
+Host: https://www.legalhomesolutions.com
+
+# Sitemaps
+Sitemap: https://www.legalhomesolutions.com/sitemap.xml
