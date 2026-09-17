@@ -218,28 +218,56 @@ const practiceAreas = [
   {
     id: 'documentation',
     title: 'Documentation & Drafting',
-    tagline: 'Precise legal document drafting for all your transactional needs',
-    desc: 'Properly drafted legal documents form the foundation of any secure transaction. We provide meticulous drafting services for a wide range of legal instruments.',
+    tagline: 'Trusted Documentation & Drafting Experts',
+    desc: 'Properly drafted legal documents form the foundation of any secure transaction. We provide meticulous drafting and registration services for a wide range of legal instruments.',
     pillars: [
       { title: 'Precision Drafting', desc: 'Every document is tailored to specific transaction requirements with precise legal language, clear terms, and comprehensive coverage of all contingencies.' },
       { title: 'Legal Compliance', desc: 'Ensuring all documents comply with applicable laws, stamp duty requirements, registration rules, and regulatory frameworks.' },
-      { title: 'End-to-End Support', desc: 'From initial drafting through vetting, registration, and post-registration formalities — complete documentation assistance.' }
+      { title: 'End-to-End Support', desc: 'From initial drafting through vetting, notary, registration, and post-registration formalities — complete documentation assistance.' }
     ],
     keyServices: [
-      { title: 'Property Documents', desc: 'Sale deeds, conveyance deeds, lease agreements, development agreements, gift deeds, and all property-related documentation.' },
-      { title: 'Business Agreements', desc: 'Partnership deeds, MOUs, joint venture agreements, service agreements, and commercial contract drafting and vetting.' },
-      { title: 'Personal Legal Documents', desc: 'Wills, testamentary documents, power of attorney (GPA & SPA), legal notices, replies, and affidavits.' }
+      { title: 'Rent & Lease Agreements', desc: 'Registered Rent Agreement, Lease Agreement drafting, biometric registration scheduling, and Sub-Registrar execution.' },
+      { title: 'Notary & Affidavits', desc: 'Notary agreements and all types of affidavits (income, address, name change, property declaration, court affidavits).' },
+      { title: 'Sale Deeds & Agreements to Sale', desc: 'Drafting Agreement to Sale (Agreement to Sell), Sale Deed, Conveyance Deed, and complete registration assistance.' },
+      { title: 'Property & Business Documents', desc: 'Gift deeds, Power of Attorney (GPA/SPA), Partnership deeds, MOUs, and commercial contract drafting.' }
     ],
     processSteps: [
       { num: '1', title: 'Requirement Analysis', desc: 'Understanding the transaction details, parties involved, and specific requirements for the legal document.' },
       { num: '2', title: 'Drafting & Review', desc: 'Preparing the document with precise legal language, reviewing all clauses, and ensuring comprehensive coverage.' },
       { num: '3', title: 'Client Approval', desc: 'Presenting the draft for client review, incorporating feedback, and finalising the document.' },
-      { num: '4', title: 'Registration & Filing', desc: 'Stamp duty calculation, e-filing, biometric registration scheduling, and post-registration formalities.' }
+      { num: '4', title: 'Notary & Registration', desc: 'Stamp duty calculation, e-filing, biometric registration scheduling, notary notarization, and post-registration formalities.' }
     ],
     sections: [
-      { heading: 'Drafting Services', text: 'Our documentation practice covers drafting, vetting, and registration of all types of legal instruments. Every document we prepare is tailored to the specific requirements of the transaction while ensuring compliance with applicable laws and registration requirements.' },
-      { heading: 'Documents We Draft', list: ['Sale Deeds & Conveyance Deeds', 'Lease & Rent Agreements', 'Partnership Deeds & MOUs', 'Wills & Testamentary Documents', 'Power of Attorney (GPA & SPA)', 'Gift Deeds & Settlement Deeds', 'Development Agreements', 'Joint Venture Agreements', 'Legal Notices & Replies'] },
+      { heading: 'Trusted Documentation & Drafting Experts', text: 'Our documentation practice covers drafting, vetting, notary attestation, and registration of all types of legal instruments. Every document we prepare is tailored to the specific requirements of the transaction while ensuring full compliance with registration and stamp duty laws.' },
+      { heading: 'Documents We Draft & Register', list: ['Registered Rent Agreement', 'Notary Agreement', 'Affidavits (All Types)', 'Lease Agreement', 'Agreement to Sale (Agreement to Sell)', 'Sale Deed & Conveyance Deed', 'Power of Attorney (GPA & SPA)', 'Gift Deeds & Settlement Deeds', 'Partnership Deeds & MOUs', 'Wills & Testamentary Documents'] },
       { heading: 'Registration Assistance', text: 'We provide end-to-end assistance for document registration at the Sub-Registrar office, including stamp duty calculation, e-filing, biometric registration scheduling, and post-registration formalities.' }
+    ]
+  },
+  {
+    id: 'company-society-formation',
+    title: 'Company & Society Formation',
+    tagline: 'Legal assistance for Company Incorporation, Housing Society & Trust registration',
+    desc: 'We provide end-to-end legal registration and incorporation services for Companies, Co-operative Societies, Public Trusts, Partnerships, and LLPs with full statutory compliance.',
+    pillars: [
+      { title: 'Business Incorporation', desc: 'Seamless registration of Private Limited Companies, LLPs, One Person Companies (OPC), and Partnership firms.' },
+      { title: 'Society & Trust Registration', desc: 'Expert legal formation of Co-operative Housing Societies, Apartment Associations, Welfare Societies, and Charitable Trusts.' },
+      { title: 'Statutory Compliance', desc: 'Drafting MOA, AOA, Society Bye-laws, Trust Deeds, Shareholder Agreements, and ROC filings.' }
+    ],
+    keyServices: [
+      { title: 'Company Incorporation', desc: 'End-to-end formation of Pvt Ltd, OPC, LLP, Section 8 (NGO) Companies, and Partnership Firm registration.' },
+      { title: 'Society & NGO Registration', desc: 'Registration of Co-operative Housing Societies, Welfare Societies under Society Registration Act, 1860, and NGO Trust registration.' },
+      { title: 'Legal Drafting & Bye-Laws', desc: 'Custom drafting of MOA & AOA, Society Bye-laws, Trust Deeds, Joint Venture agreements, and Shareholder Agreements.' }
+    ],
+    processSteps: [
+      { num: '1', title: 'Consultation & Planning', desc: 'Understanding your business or legal structure needs to choose the right legal entity.' },
+      { num: '2', title: 'Name Approval & Drafting', desc: 'Securing name approval and drafting MOA, AOA, Trust Deeds, or Society Bye-laws.' },
+      { num: '3', title: 'Filing & Registration', desc: 'Submitting incorporation documents to MCA / ROC or District Registrar of Societies & Trusts.' },
+      { num: '4', title: 'Certificate & Compliance', desc: 'Issuance of Registration Certificate, PAN, TAN, and guidance on post-incorporation statutory compliance.' }
+    ],
+    sections: [
+      { heading: 'Company & Society Formation Services', text: 'Our practice specializes in helping entrepreneurs, business owners, housing societies, and non-profits navigate entity formation smoothly. From corporate incorporation under the Companies Act to registering housing societies and charitable trusts, we ensure meticulous legal compliance.' },
+      { heading: 'Registrations & Entity Types', list: ['Private Limited Company Incorporation', 'Co-operative Housing Society Registration', 'LLP & Partnership Firm Registration', 'Public Charitable Trust Registration', 'Society Registration Act, 1860 Filings', 'Section 8 (NGO / Non-Profit) Company', 'One Person Company (OPC) Registration', 'MOA, AOA & Society Bye-laws Drafting', 'ROC & Statutory Compliance Advisory'] },
+      { heading: 'End-to-End Regulatory Support', text: 'We assist with document preparation, stamp duty calculation, government filings, name approval, and obtaining official registration certificates so you can focus on your core objectives with complete peace of mind.' }
     ]
   }
 ]

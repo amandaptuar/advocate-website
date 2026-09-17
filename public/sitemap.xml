@@ -63,7 +63,15 @@
   <!-- Practice Area: Legal Documentation & Drafting -->
   <url>
     <loc>https://www.legalhomesolutions.com/practice/documentation</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Practice Area: Company & Society Formation -->
+  <url>
+    <loc>https://www.legalhomesolutions.com/practice/company-society-formation</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -150,11 +150,18 @@ export const practiceSEO = {
     serviceName: 'Family Law & Domestic Relations',
   },
   'documentation': {
-    title: 'Legal Drafting & Agreement Registration | Adv. Vivek Wankhade | Pune',
-    description: 'Advocate Vivek Wankhade offers precision drafting and Sub-Registrar registration assistance for Sale Deeds, Conveyance Deeds, Lease Agreements, Power of Attorney, and Wills in Pune.',
+    title: 'Trusted Documentation & Drafting Experts | Registered Rent Agreement, Notary, Sale Deed Pune | Adv. Vivek Wankhade',
+    description: 'Advocate Vivek Wankhade - Trusted Documentation & Drafting Experts in Pune. Registered Rent Agreements, Notary Agreements, Affidavits (All Types), Lease Agreements, Agreement to Sale, and Sale Deeds drafting & registration.',
     canonicalPath: '/practice/documentation',
-    keywords: 'Advocate Vivek Wankhade, Legal Drafting Advocate Pune, Sale Deed Drafting Lawyer Pune, Sub-Registrar Office Registration Pune, Legal Home Solutions, Will Drafting Lawyer',
-    serviceName: 'Legal Documentation & Drafting',
+    keywords: 'Advocate Vivek Wankhade, Trusted Documentation & Drafting Experts, Registered Rent Agreement Pune, Notary Agreement Pune, Affidavit Drafting Pune, Lease Agreement Pune, Agreement to Sale Pune, Sale Deed Lawyer Pune',
+    serviceName: 'Trusted Documentation & Drafting Experts',
+  },
+  'company-society-formation': {
+    title: 'Company & Society Formation Lawyer Pune | Adv. Vivek Wankhade | Legal Home Solutions',
+    description: 'Advocate Vivek Wankhade provides expert legal services for Company Formation (Pvt Ltd, LLP, OPC), Co-operative Housing Society Registration, Trust & NGO Registration in Pune.',
+    canonicalPath: '/practice/company-society-formation',
+    keywords: 'Advocate Vivek Wankhade, Company Formation Lawyer Pune, Society Registration Advocate Pune, Housing Society Registration Pune, LLP Registration Pune, Legal Home Solutions, NGO Trust Registration',
+    serviceName: 'Company & Society Formation',
   },
 }
 
