@@ -34,8 +34,9 @@ ul{list-style:none}
 /* ---- DISCLAIMER ---- */
 .disc-overlay{position:fixed;inset:0;background:rgba(26,23,16,.85);backdrop-filter:blur(14px);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fi .4s ease}
 .disc-box{background:var(--bg);border:1px solid var(--gold-bdr);max-width:540px;width:92%;padding:40px 32px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.15)}
-.disc-box .d-logo{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:var(--gold-bg);display:flex;align-items:center;justify-content:center;border:1px solid var(--gold-bdr)}
+.disc-box .d-logo{width:72px;height:72px;margin:0 auto 16px;border-radius:12px;background:#ffffff;display:flex;align-items:center;justify-content:center;border:1px solid var(--gold-bdr);padding:4px;overflow:hidden}
 .disc-box .d-logo svg{width:32px;height:32px;fill:var(--gold)}
+.d-logo-img{width:100%;height:100%;object-fit:contain;border-radius:6px}
 .disc-box h2{font-family:var(--serif);font-size:1.4rem;color:var(--gold-lo);margin-bottom:16px}
 .disc-box .d-body{text-align:left;color:var(--gray);font-size:.8rem;line-height:1.8;margin-bottom:22px}
 .disc-box .d-body ol{padding-left:16px;list-style:decimal}
@@ -46,9 +47,11 @@ ul{list-style:none}
 /* ---- NAVBAR ---- */
 .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;transition:all .3s var(--ease);background:rgba(255,255,255,.6);backdrop-filter:blur(10px)}
 .nav.stuck{background:rgba(255,255,255,.97);backdrop-filter:blur(12px);box-shadow:0 1px 12px rgba(0,0,0,.06);border-bottom:1px solid var(--line)}
-.nav-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nav-brand{display:flex;align-items:center;gap:12px;cursor:pointer}
 .nav-brand .nb-icon{width:38px;height:38px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .nav-brand .nb-icon svg{width:20px;height:20px;fill:#fff}
+.nb-logo-img{height:44px;width:auto;object-fit:contain;border-radius:4px;background:#ffffff;padding:2px 4px;box-shadow:0 1px 4px rgba(0,0,0,0.08);flex-shrink:0;border:1px solid var(--line2)}
+.ft-logo-img{height:54px;width:auto;object-fit:contain;margin-bottom:12px;background:#ffffff;padding:4px 6px;border-radius:6px;display:block;border:1px solid rgba(255,255,255,0.15)}
 .nav-brand .nb-txt{display:flex;flex-direction:column;line-height:1.1}
 .nav-brand .nb-name{font-family:var(--serif);font-size:.95rem;color:var(--dark);font-weight:600}
 .nav-brand .nb-sub{font-size:.55rem;color:var(--faint);letter-spacing:1.5px;text-transform:uppercase}

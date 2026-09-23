@@ -27,12 +27,12 @@ const WhatsAppIcon = ({ size = 20, fill = "currentColor" }) => (
 function FloatingWhatsApp() {
   return (
     <a 
-      href="https://wa.me/917499768417?text=Hello%20Adv.%20Vivek%20Wankhade%2C%20I%20would%20like%20to%20inquire%20about%20legal%20consultation." 
+      href="https://wa.me/917499768417?text=Hello%20Adv.%20Viveak%20Wankhade%2C%20I%20would%20like%20to%20inquire%20about%20legal%20consultation." 
       target="_blank" 
       rel="noopener noreferrer" 
       className="whatsapp-float-circle"
       title="Chat on WhatsApp"
-      aria-label="Chat with Adv. Vivek Wankhade on WhatsApp"
+      aria-label="Chat with Adv. Viveak Wankhade on WhatsApp"
     >
       <WhatsAppIcon size={30} fill="#ffffff" />
       <div className="whatsapp-pulse"></div>
@@ -310,9 +310,9 @@ function Navbar({ onNav }) {
   return (
     <nav className={`nav ${scrolled ? 'stuck' : ''}`}>
       <div className="nav-brand" onClick={() => { navigate('/'); window.scrollTo(0, 0) }}>
-        <div className="nb-icon"><ScalesIcon /></div>
+        <img src="/logo.png" alt="Legal Home Solutions - Adv. Viveak Wankhade Logo" className="nb-logo-img" />
         <div className="nb-txt">
-          <span className="nb-name">Adv. Vivek Wankhade</span>
+          <span className="nb-name">Adv. Viveak Wankhade</span>
           <span className="nb-sub">District & Session Court, Pune</span>
         </div>
       </div>
@@ -342,8 +342,8 @@ function Footer() {
     <footer className="ft">
       <div className="ft-inner">
         <div className="ft-brand">
-          <div className="nb-icon" style={{ width: 48, height: 48 }}><ScalesIcon /></div>
-          <h3>Adv. Vivek Wankhade</h3>
+          <img src="/logo.png" alt="Legal Home Solutions - Adv. Viveak Wankhade Logo" className="ft-logo-img" />
+          <h3>Adv. Viveak Wankhade</h3>
           <p>Practising Advocate at the District and Session Court, Pune. Specialising in property law, RERA compliance, cyber crime, and due diligence services across India.</p>
         </div>
         <div className="ft-col">
@@ -366,13 +366,13 @@ function Footer() {
           <h4>Contact</h4>
           <ul>
             <li><a href="tel:+917499768417">+91 74997 68417</a></li>
-            <li><a href="mailto:adv.vivekwankhade@gmail.com">adv.vivekwankhade@gmail.com</a></li>
+            <li><a href="mailto:adv.viveakwankhade@gmail.com">adv.viveakwankhade@gmail.com</a></li>
             <li><a href="#" onClick={(e) => { e.preventDefault(); goSection('contact') }}>District & Session Court, Pune</a></li>
           </ul>
         </div>
       </div>
       <div className="ft-bar">
-        <p>&copy; 2026 <span className="hi">Adv. Vivek Wankhade</span> &mdash; All Rights Reserved</p>
+        <p>&copy; 2026 <span className="hi">Adv. Viveak Wankhade</span> &mdash; All Rights Reserved</p>
       </div>
     </footer>
   )
@@ -416,7 +416,7 @@ function HomePage() {
 📝 *Legal Query Details:*
 ${message || 'No additional message details provided.'}
 ━━━━━━━━━━━━━━━━━━━━━━
-🌐 *Sent via Adv. Vivek Wankhade Legal Portal*`
+🌐 *Sent via Adv. Viveak Wankhade Legal Portal*`
 
     const url = `https://wa.me/917499768417?text=${encodeURIComponent(text)}`
     window.open(url, '_blank')
@@ -434,12 +434,12 @@ ${message || 'No additional message details provided.'}
       {showDisc && (
         <div className="disc-overlay">
           <div className="disc-box">
-            <div className="d-logo"><ScalesIcon /></div>
+            <div className="d-logo"><img src="/logo.png" alt="Legal Home Solutions Logo" className="d-logo-img" /></div>
             <h2>Disclaimer</h2>
             <div className="d-body">
               <p style={{ marginBottom: 10 }}>As per the rules of the Bar Council of India, advocates are not permitted to solicit work or advertise. By clicking "I Agree", the user acknowledges:</p>
               <ol>
-                <li>There has been no advertisement, personal communication, solicitation, invitation or inducement of any sort from Adv. Vivek Wankhade to solicit any work.</li>
+                <li>There has been no advertisement, personal communication, solicitation, invitation or inducement of any sort from Adv. Viveak Wankhade to solicit any work.</li>
                 <li>The user wishes to gain more information about the advocate for his/her own use.</li>
                 <li>The information is provided to the user only on his/her specific request.</li>
                 <li>This website is solely for informational purposes and should not be interpreted as soliciting or advertisement.</li>
@@ -452,11 +452,11 @@ ${message || 'No additional message details provided.'}
 
       {/* HERO (CLEAN LAW BACKGROUND & HEADING + BUTTONS) */}
       <section className="hero" id="home">
-        <div className="hero-bg"><img src="/indian-judiciary.png" alt="Indian Judiciary High Court and District Court Representation - Advocate Vivek Wankhade Pune" fetchPriority="high" loading="eager" /></div>
+        <div className="hero-bg"><img src="/indian-judiciary.png" alt="Indian Judiciary High Court and District Court Representation - Advocate Viveak Wankhade Pune" fetchPriority="high" loading="eager" /></div>
         <div className="hero-inner-centered">
           <div className="hero-eyebrow-centered">HIGH COURT & DISTRICT COURT ADVOCATE</div>
           <div className="hero-name-pre-centered">Advocate</div>
-          <h1 className="hero-title-centered"><span className="hi">Vivek Wankhade</span></h1>
+          <h1 className="hero-title-centered"><span className="hi">Viveak Wankhade</span></h1>
           <p className="hero-tag-centered">
             Strategic Defense &bull; Property Due Diligence &bull; Cyber Crime &bull; Commercial Litigation &bull; Civil & Criminal Representation
           </p>
@@ -486,12 +486,12 @@ ${message || 'No additional message details provided.'}
       <section className="sec sec-alt" id="about">
         <div className="txt-c rv">
           <div className="s-label">About</div>
-          <h2 className="s-title">Meet <span className="hi">Adv. Vivek Wankhade</span></h2>
+          <h2 className="s-title">Meet <span className="hi">Adv. Viveak Wankhade</span></h2>
           <p className="s-desc">A trusted name in legal practice at the District and Session Court, Pune</p>
         </div>
         <div className="abt-grid">
           <div className="abt-img rv">
-            <img src="/image.png" alt="Advocate Vivek Wankhade - District and Session Court, Pune" loading="lazy" decoding="async" />
+            <img src="/image.png" alt="Advocate Viveak Wankhade - District and Session Court, Pune" loading="lazy" decoding="async" />
             <div className="yr">
               <div className="yr-n">10+</div>
               <div className="yr-t">Years</div>
@@ -499,9 +499,9 @@ ${message || 'No additional message details provided.'}
           </div>
           <div className="abt-body rv">
             <div className="s-label">About</div>
-            <h2 className="s-title" style={{ marginBottom: 6 }}>Adv. <span className="hi">Vivek Wankhade</span></h2>
+            <h2 className="s-title" style={{ marginBottom: 6 }}>Adv. <span className="hi">Viveak Wankhade</span></h2>
             <div className="abt-role">Advocate &mdash; District & Session Court, Pune</div>
-            <p>Adv. Vivek Wankhade is a distinguished legal practitioner based in Pune, specializing in property law, civil litigation, criminal defence, and cyber crime matters. With years of dedicated service at the District and Session Court, Pune, he has built a reputation for meticulous case preparation and unwavering commitment to his clients.</p>
+            <p>Adv. Viveak Wankhade is a distinguished legal practitioner based in Pune, specializing in property law, civil litigation, criminal defence, and cyber crime matters. With years of dedicated service at the District and Session Court, Pune, he has built a reputation for meticulous case preparation and unwavering commitment to his clients.</p>
             <p>His practice encompasses comprehensive legal services with particular expertise in RERA compliance, property verification, due diligence, and cyber security law. Adv. Wankhade combines deep legal knowledge with practical understanding of property and IT law across major Indian cities.</p>
             <div className="abt-chips">
               {['Property Law', 'RERA Compliance', 'Cyber Crime', 'Criminal Defence', 'Civil Litigation', 'Due Diligence'].map(c => (
@@ -593,7 +593,7 @@ ${message || 'No additional message details provided.'}
         <div className="txt-c rv">
           <div className="s-label">Why Choose Us</div>
           <h2 className="s-title">Trusted Legal <span className="hi">Excellence</span></h2>
-          <p className="s-desc">What sets Adv. Vivek Wankhade's practice apart from the rest</p>
+          <p className="s-desc">What sets Adv. Viveak Wankhade's practice apart from the rest</p>
         </div>
         <div className="prop-cards rv" style={{ maxWidth: 1100, margin: '0 auto' }}>
           {[
@@ -649,10 +649,10 @@ ${message || 'No additional message details provided.'}
         <div className="ct-grid">
           <div className="ct-left rv">
             <h3>Let's <span className="hi">Connect</span></h3>
-            <p>Whether you need advice on property matters, RERA compliance, cyber crime, or any other legal issue, Adv. Vivek Wankhade is here to help.</p>
+            <p>Whether you need advice on property matters, RERA compliance, cyber crime, or any other legal issue, Adv. Viveak Wankhade is here to help.</p>
             {[
               [<PhoneIcon />, 'Phone', '+91 74997 68417'],
-              [<MailIcon />, 'Email', 'adv.vivekwankhade@gmail.com'],
+              [<MailIcon />, 'Email', 'adv.viveakwankhade@gmail.com'],
               [<MapIcon />, 'Office', 'District and Session Court,\nPune, Maharashtra'],
               [<GavelIcon />, 'Courts', 'District Court · Session Court · MahaRERA'],
             ].map(([icon, h, p], i) => (
@@ -717,7 +717,7 @@ function PracticePage() {
   if (!area) {
     return (
       <div style={{ padding: '200px 48px 100px', textAlign: 'center' }}>
-        <SEO title="Practice Area Not Found | Adv. Vivek Wankhade" noIndex={true} />
+        <SEO title="Practice Area Not Found | Adv. Viveak Wankhade" noIndex={true} />
         <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2rem', marginBottom: 16 }}>Practice Area Not Found</h2>
         <p style={{ color: 'var(--gray)', marginBottom: 24 }}>The practice area you're looking for doesn't exist.</p>
         <Link to="/" className="b-gold" onClick={() => window.scrollTo(0, 0)}>Go Home</Link>
@@ -726,7 +726,7 @@ function PracticePage() {
   }
 
   const meta = practiceSEO[id] || {
-    title: `${area.title} | Adv. Vivek Wankhade | Pune Advocate`,
+    title: `${area.title} | Adv. Viveak Wankhade | Pune Advocate`,
     description: area.desc,
     canonicalPath: `/practice/${id}`,
     keywords: `${area.title}, Advocate Pune, Lawyer Pune, Legal Counsel Maharashtra`,
@@ -752,7 +752,7 @@ function PracticePage() {
         <h1>{area.title.split(' ').slice(0, -1).join(' ')} <span className="hi">{area.title.split(' ').slice(-1)}</span></h1>
         <p className="ph-desc">{area.desc}</p>
         <div className="ph-btns">
-          <a href="https://wa.me/917499768417?text=Hello%20Adv.%20Vivek%20Wankhade%2C%20I%20need%20consultation%20regarding%20" 
+          <a href="https://wa.me/917499768417?text=Hello%20Adv.%20Viveak%20Wankhade%2C%20I%20need%20consultation%20regarding%20" 
              target="_blank" rel="noopener noreferrer" className="b-gold">Book Consultation</a>
           <a href="tel:+917499768417" className="b-line">Call Now</a>
         </div>
@@ -841,7 +841,7 @@ function PracticePage() {
         <div className="txt-c rv">
           <div className="s-label">Explore More</div>
           <h2 className="s-title">Related <span className="hi">Practice Areas</span></h2>
-          <p className="s-desc">Other areas of legal expertise offered by Adv. Vivek Wankhade</p>
+          <p className="s-desc">Other areas of legal expertise offered by Adv. Viveak Wankhade</p>
         </div>
         <div className="prac-related-grid">
           {relatedAreas.map((ra, i) => (
@@ -866,12 +866,12 @@ function PracticePage() {
         <div className="prac-cta-full-inner rv">
           <div className="s-label" style={{color: 'var(--gold-hi)'}}>Get Started</div>
           <h2>Need Legal Assistance with <span className="hi">{area.title}</span>?</h2>
-          <p>Schedule a consultation with Adv. Vivek Wankhade for expert legal advice and representation.</p>
+          <p>Schedule a consultation with Adv. Viveak Wankhade for expert legal advice and representation.</p>
           <div className="prac-cta-btns">
             <a href="tel:+917499768417" className="b-gold">
               Call +91 74997 68417
             </a>
-            <a href="https://wa.me/917499768417?text=Hello%20Adv.%20Vivek%20Wankhade%2C%20I%20need%20consultation%20regarding%20" 
+            <a href="https://wa.me/917499768417?text=Hello%20Adv.%20Viveak%20Wankhade%2C%20I%20need%20consultation%20regarding%20" 
                target="_blank" rel="noopener noreferrer" className="b-whatsapp">
               <WhatsAppIcon /> Chat on WhatsApp
             </a>
@@ -886,7 +886,7 @@ function PracticePage() {
 function NotFoundPage() {
   return (
     <section className="sec" style={{ minHeight: '65vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '160px 24px 80px' }}>
-      <SEO title="404: Page Not Found | Adv. Vivek Wankhade" noIndex={true} />
+      <SEO title="404: Page Not Found | Adv. Viveak Wankhade" noIndex={true} />
       <div style={{ maxWidth: 600, margin: '0 auto' }}>
         <div className="s-label">Error 404</div>
         <h1 className="s-title" style={{ margin: '0 auto 16px' }}>Page <span className="hi">Not Found</span></h1>

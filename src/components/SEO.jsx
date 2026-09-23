@@ -13,7 +13,7 @@ export default function SEO({
   canonicalPath = '',
   keywords,
   ogType = 'website',
-  ogImage = `${BASE_URL}/hero-banner.jpg`,
+  ogImage = `${BASE_URL}/logo.png`,
   structuredData,
   noIndex = false,
 }) {
@@ -60,7 +60,7 @@ export default function SEO({
     setMetaTag('property', 'og:url', canonicalUrl)
     setMetaTag('property', 'og:type', ogType)
     setMetaTag('property', 'og:image', ogImage)
-    setMetaTag('property', 'og:site_name', 'Advocate Vivek Wankhade - Legal Practice')
+    setMetaTag('property', 'og:site_name', 'Advocate Viveak Wankhade - Legal Practice')
     setMetaTag('property', 'og:locale', 'en_IN')
 
     // Twitter Card
